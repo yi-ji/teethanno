@@ -7,9 +7,10 @@
 #### API
 ```
 [F, X, frag_color] = annotate_teeth(filepath, anchor_points);
+cusps = detect_cusp(F, X, anchor_points);
 ```
 * Input: `anchor_points` is a three-elements array which should containe 3 points used for to locating a middle plane of the gingival.
-* Output: `F` are fragments (each fragment consists of three IDs of verticles ), `X` are IDs and coordinates of verticles. `frag_color` is the classification array of every fragments, 0 for background and 1-n for n teeth.
+* Output: `F` are fragments (each fragment consists of three IDs of verticles ), `X` are IDs and coordinates of verticles. `frag_color` is the classification array of every fragments, 0 for background and 1-n for n teeth. `cusps` are IDs of cusp verticles.
 
 #### Usage
 * Before using, make sure to do:
